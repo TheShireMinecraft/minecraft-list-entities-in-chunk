@@ -1,6 +1,6 @@
 main: us.shirecraft.entityhelper.EntityHelper
 name: EntityHelper
-version: '1.0.0'
+version: '1.0.1'
 description: "Lists entities in the current chunk with their location"
 api-version: 1.19
 load: POSTWORLD
@@ -10,4 +10,4 @@ prefix: EntityHelper
 commands:
   listentities:
     description: Lists entities in the current chunk with their location
-    usage: /listentities
+    usage: /listentities [limit]

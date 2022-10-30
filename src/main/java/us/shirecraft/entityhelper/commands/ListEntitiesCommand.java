@@ -37,8 +37,20 @@ public class ListEntitiesCommand implements CommandExecutor {
             return true;
         }
 
-        int limiter = 15;
-        sender.sendMessage("There are " + (entities.length + 1) + " entities in the current chunk. " + chunkLocation);
+        int limiter = DEFAULT_NUMBER_OF_ENTITIES_TO_LIST;
+        if(args.length > 0)
+        {
+            try {
+                limiter = Integer.parseInt(args[0]);
+            }
+            catch(NumberFormatException ignored) {
+                sender.sendMessage("The limit must be numeric. Please try again with a different limit, or run the command without specifying a limit.");
+                return true;
+            }
+        }
+
+
+        sender.sendMessage("There are " + entities.length + " entities in the current chunk. " + chunkLocation);
         sender.sendMessage("Up to " + limiter + " of them are listed below...");
         for (int i = 0; i < entities.length; i++) {
             if(i > limiter) break;
@@ -51,4 +63,6 @@ public class ListEntitiesCommand implements CommandExecutor {
 
         return true;
     }
+
+    private final int DEFAULT_NUMBER_OF_ENTITIES_TO_LIST = 15;
 }
