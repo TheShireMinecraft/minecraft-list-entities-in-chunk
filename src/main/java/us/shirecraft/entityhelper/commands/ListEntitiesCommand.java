@@ -37,9 +37,9 @@ public class ListEntitiesCommand implements CommandExecutor {
             return true;
         }
 
-        int limiter = 10;
+        int limiter = 15;
         sender.sendMessage("There are " + (entities.length + 1) + " entities in the current chunk. " + chunkLocation);
-        sender.sendMessage(limiter + " of them are listed below...");
+        sender.sendMessage("Up to " + limiter + " of them are listed below...");
         for (int i = 0; i < entities.length; i++) {
             if(i > limiter) break;
             var entity = entities[i];

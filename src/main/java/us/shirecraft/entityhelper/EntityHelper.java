@@ -3,7 +3,7 @@ package us.shirecraft.entityhelper;
 import org.bukkit.plugin.java.JavaPlugin;
 import us.shirecraft.entityhelper.commands.ListEntitiesCommand;
 
-public class EntityHelper extends JavaPlugin {
+public final class EntityHelper extends JavaPlugin {
     @Override
     public void onEnable() {
         var listEntitiesCommand = this.getCommand("listentities");
