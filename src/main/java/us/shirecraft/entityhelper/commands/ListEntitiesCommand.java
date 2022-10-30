@@ -44,7 +44,7 @@ public class ListEntitiesCommand implements CommandExecutor {
             if(i > limiter) break;
             var entity = entities[i];
             var entityLocation = "(" + entity.getLocation().getBlockX() + "," + entity.getLocation().getBlockY() + "," + entity.getLocation().getBlockZ() + ")";
-            sender.sendMessage(i + "> Name:" + entity.getType().name() + " - " + entity.getName() + " - Loc:" + entityLocation);
+            sender.sendMessage((i+1) + "> " + entity.getType().name() + " " + entity.getName() + " - Loc: " + entityLocation);
             limiter++;
         }
         sender.sendMessage("");
