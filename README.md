@@ -1,7 +1,6 @@
 # Minecraft Entity Helper
 
-![image](https://user-images.githubusercontent.com/19779808/198893818-a78d7a53-4753-43cd-9059-37359b61b174.png)
-
+![image](https://user-images.githubusercontent.com/19779808/198895138-9f34c70c-fd06-4690-a2e7-f0e9db7733c3.png)
 
 ## Overview
 Lists entities in the current chunk.
