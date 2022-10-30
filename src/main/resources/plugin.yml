@@ -1,6 +1,6 @@
 main: us.shirecraft.entityhelper.EntityHelper
 name: EntityHelper
-version: '1.0.1'
+version: '1.0.2'
 description: "Lists entities in the current chunk with their location"
 api-version: 1.19
 load: POSTWORLD

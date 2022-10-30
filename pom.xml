@@ -6,7 +6,7 @@
 
     <groupId>us.shirecraft</groupId>
     <artifactId>minecraft-list-entities-in-chunk</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <name>EntityHelper</name>
     <packaging>jar</packaging>
     <url>https://github.com/TheShireMinecraft/minecraft-list-entities-in-chunk</url>
