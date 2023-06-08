@@ -6,7 +6,7 @@
 
     <groupId>us.shirecraft</groupId>
     <artifactId>minecraft-list-entities-in-chunk</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <name>EntityHelper</name>
     <packaging>jar</packaging>
     <url>https://github.com/TheShireMinecraft/minecraft-list-entities-in-chunk</url>
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.19-R0.1-SNAPSHOT</version>
+            <version>1.20-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
