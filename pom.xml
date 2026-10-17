@@ -6,21 +6,24 @@
 
     <groupId>us.shirecraft</groupId>
     <artifactId>minecraft-list-entities-in-chunk</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <name>EntityHelper</name>
     <packaging>jar</packaging>
     <url>https://github.com/TheShireMinecraft/minecraft-list-entities-in-chunk</url>
+    <description>Lists entities in the current chunk with their location</description>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <mainClass>us.shirecraft.entityhelper.EntityHelper</mainClass>
+        <minimumMinecraftVersion>26.3</minimumMinecraftVersion>
     </properties>
 
     <developers>
         <developer>
-            <name>Andy</name>
+            <name>Blitheness</name>
             <email>development@shirecraft.us</email>
             <organization>The Shire Minecraft Server</organization>
             <organizationUrl>https://github.com/TheShireMinecraft</organizationUrl>
@@ -43,34 +46,43 @@
         <dependency>
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
-            <version>1.20-R0.1-SNAPSHOT</version>
+            <version>26.3.build.202-stable</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.0</version>
+            <version>6.1.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>4.8.0</version>
+            <version>5.23.0</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>plugin.yml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>3.5.6</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.8</version>
+                <version>0.8.15</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>

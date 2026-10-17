@@ -1,12 +1,12 @@
-main: us.shirecraft.entityhelper.EntityHelper
-name: EntityHelper
-version: '1.0.3'
-description: "Lists entities in the current chunk with their location"
-api-version: 1.19
+main: ${mainClass}
+name: ${name}
+version: ${version}
+description: ${description}
+api-version: ${minimumMinecraftVersion}
 load: POSTWORLD
-author: Blitheness
+author: ${developers[0].name}
 website: shirecraft.us
-prefix: EntityHelper
+prefix: ${name}
 commands:
   listentities:
     description: Lists entities in the current chunk with their location

@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 public class ListEntitiesCommand implements CommandExecutor {
     @Override
@@ -12,7 +13,7 @@ public class ListEntitiesCommand implements CommandExecutor {
             @NotNull CommandSender sender,
             @NotNull Command command,
             @NotNull String label,
-            String[] args
+            String @NonNull [] args
     ) {
         if(!(sender instanceof Player player))
         {
@@ -49,11 +50,9 @@ public class ListEntitiesCommand implements CommandExecutor {
             }
         }
 
-
         sender.sendMessage("There are " + entities.length + " entities in the current chunk. " + chunkLocation);
         sender.sendMessage("Up to " + limiter + " of them are listed below...");
-        for (int i = 0; i < entities.length; i++) {
-            if(i == limiter) break;
+        for (int i = 0; i <= limiter && i < entities.length; i++) {
             var entity = entities[i];
             var entityLocation = "(" + entity.getLocation().getBlockX() + "," + entity.getLocation().getBlockY() + "," + entity.getLocation().getBlockZ() + ")";
             sender.sendMessage((i+1) + "> " + entity.getType().name() + " " + entity.getName() + " - Loc: " + entityLocation);

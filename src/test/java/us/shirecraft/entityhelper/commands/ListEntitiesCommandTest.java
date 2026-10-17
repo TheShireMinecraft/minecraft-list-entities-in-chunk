@@ -91,7 +91,7 @@ public class ListEntitiesCommandTest {
         when(mockLocation.getBlockZ()).thenReturn(4);
         when(mockEntity1.getLocation()).thenReturn(mockLocation);
         when(mockEntity2.getLocation()).thenReturn(mockLocation);
-        when(mockEntity1.getType()).thenReturn(EntityType.BOAT);
+        when(mockEntity1.getType()).thenReturn(EntityType.OAK_BOAT);
         when(mockEntity1.getName()).thenReturn("Boaty McBoatface");
         when(mockEntity2.getType()).thenReturn(EntityType.VILLAGER);
         when(mockEntity2.getName()).thenReturn("Villager McVillagerface");
@@ -105,7 +105,7 @@ public class ListEntitiesCommandTest {
         // Assert
         verify(sender).sendMessage("There are 2 entities in the current chunk. (0,0)");
         verify(sender).sendMessage("Up to 15 of them are listed below...");
-        verify(sender).sendMessage("1> BOAT Boaty McBoatface - Loc: (-30,72,4)");
+        verify(sender).sendMessage("1> OAK_BOAT Boaty McBoatface - Loc: (-30,72,4)");
         verify(sender).sendMessage("2> VILLAGER Villager McVillagerface - Loc: (-30,72,4)");
         verify(sender).sendMessage("");
     }
